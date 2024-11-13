@@ -12,21 +12,11 @@ import SwiftUI
 struct SwitcherooApp: App {
 
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        Window("Switcheroo", id: "main") {
+          ContentView()
                 .frame(width: 320)
         }
-        .windowResizabilityContentSize()
+        .windowResizability(.contentSize)
     }
 
-}
-
-extension Scene {
-    func windowResizabilityContentSize() -> some Scene {
-        if #available(macOS 13.0, *) {
-            return windowResizability(.contentSize)
-        } else {
-            return self
-        }
-    }
 }
