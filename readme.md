@@ -26,12 +26,12 @@ Currently, setting up existing Safari Profiles in Switcheroo is a bit cumbersome
 
 ## Version History
 
-**0.2 - November 13, 2024**
+**1.0.1 - November 13, 2024**
 
 - A macOS app icon
 - A few fixes related to macOS Sequoia
 
-**0.1 - March 19, 2024**
+**1.0 - March 19, 2024**
 
 - Initial release
 - Allows you to manually set up Safari Profiles
