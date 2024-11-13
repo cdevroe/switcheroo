@@ -11,6 +11,8 @@ import SwiftUI
 @main
 struct SwitcherooApp: App {
 
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
         Window("Switcheroo", id: "main") {
           ContentView()

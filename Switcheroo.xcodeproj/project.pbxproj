@@ -10,6 +10,7 @@
 		FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */; };
 		FE1A8B262B98F32E0007963E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A8B252B98F32E0007963E /* ContentView.swift */; };
 		FE1A8B282B98F32F0007963E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1A8B272B98F32F0007963E /* Assets.xcassets */; };
+		FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		FE1A8B272B98F32F0007963E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE1A8B2C2B98F32F0007963E /* Switcheroo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Switcheroo.entitlements; sourceTree = "<group>"; };
 		FE2391E32B99016B0094E61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				FE2391E32B99016B0094E61B /* Info.plist */,
+				FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */,
 				FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */,
 				FE1A8B252B98F32E0007963E /* ContentView.swift */,
 				FE1A8B272B98F32F0007963E /* Assets.xcassets */,
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */,
 				FE1A8B262B98F32E0007963E /* ContentView.swift in Sources */,
 				FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */,
 			);
