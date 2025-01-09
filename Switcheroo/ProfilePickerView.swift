@@ -59,26 +59,37 @@ struct ProfilePickerView: View {
 
     private func openURL(_ url: String, inWindowWithIdentifier identifier: String) {
         let appleScript = """
-        tell application "Safari"
-            set tabExists to false
-            set windowCount to count windows
-            repeat with x from 1 to windowCount
-                set firstTabURL to URL of tab 1 of window x
-                if firstTabURL starts with "\(identifier)" then
-                    set tabExists to true
-                    tell window x
-                        make new tab with properties {URL:"\(url)"}
-                        set current tab to the last tab
-                        activate
-                    end tell
-                    exit repeat
-                end if
-            end repeat
-            if not tabExists then
-                make new document with properties {URL:"\(url)"}
-                activate
-            end if
+        tell application "System Events"
+            set safariRunning to (name of processes) contains "Safari"
         end tell
+
+        if safariRunning then
+            tell application "Safari"
+                set tabExists to false
+                set windowCount to count windows
+                repeat with x from 1 to windowCount
+                    set firstTabURL to URL of tab 1 of window x
+                    if firstTabURL starts with "\(identifier)" then
+                        set tabExists to true
+                        tell window x
+                            make new tab with properties {URL:"\(url)"}
+                            set current tab to the last tab
+                            activate
+                        end tell
+                        exit repeat
+                    end if
+                end repeat
+                if not tabExists then
+                    make new document with properties {URL:"\(url)"}
+                    activate
+                end if
+            end tell
+        else
+            tell application "Safari"
+                activate
+                open location "\(url)"
+            end tell
+        end if
         """
 
         if let scriptObject = NSAppleScript(source: appleScript) {
