@@ -24,6 +24,16 @@ struct ProfilePickerView: View {
         .padding(20)
         .background(.ultraThinMaterial)
         .cornerRadius(30)
+        .background(
+            KeyDownListener(
+                selectedIndex: $selectedIndex,
+                profiles: profiles.sorted(by: <),
+                url: url,
+                opener: { url, identifier in
+                    openURL(url, inWindowWithIdentifier: identifier)
+                }
+            )
+        )
     }
 
     private func button(with profile: Dictionary<String, String>.Element, index: Int) -> some View {
@@ -40,7 +50,6 @@ struct ProfilePickerView: View {
         }
         .buttonStyle(.plain)
         .containerShape(RoundedRectangle(cornerRadius: 10))
-        .keyboardShortcut(KeyEquivalent(Character("\(index + 1)")), modifiers: [])
         .onHover { hover in
             if hover {
                 selectedIndex = index
