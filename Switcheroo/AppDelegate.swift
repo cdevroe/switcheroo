@@ -11,6 +11,8 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var url: URL?
+    private var settingsWindow: NSWindow?
+    private var floatingPanel: NSPanel?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         if url == nil {
@@ -29,13 +31,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func openPanel(with url: URL) {
-        let panel = FloatingPanel(
+        floatingPanel = FloatingPanel(
             view: ProfilePickerView(url: url)
         )
 
-        panel.center()
-        panel.orderFront(nil)
-        panel.makeKey()
+        floatingPanel?.center()
+        floatingPanel?.orderFront(nil)
+        floatingPanel?.makeKey()
     }
 
     private func showSettings() {
@@ -43,18 +45,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             rootView: SettingsView()
         )
 
-        let window = NSWindow(
+        settingsWindow = NSWindow(
             contentRect: NSRect(origin: .zero, size: hostingView.fittingSize),
             styleMask: [.titled, .closable, .resizable, .miniaturizable],
             backing: .buffered,
             defer: false
         )
 
-        window.title = "Switcheroo Settings"
-        window.contentView = hostingView
-        window.center()
-        window.orderFront(nil)
-        window.makeKey()
+        settingsWindow?.title = "Switcheroo Settings"
+        settingsWindow?.contentView = hostingView
+        settingsWindow?.center()
+        settingsWindow?.orderFront(nil)
+        settingsWindow?.makeKey()
     }
 
 }
