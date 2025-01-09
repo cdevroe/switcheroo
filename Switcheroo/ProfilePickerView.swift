@@ -10,18 +10,28 @@ import SwiftUI
 
 struct ProfilePickerView: View {
 
-    let urlToOpen: String
+    let url: URL
 
     @State private var profiles = UserDefaults.standard.dictionary(forKey: "profiles") as? [String: String] ?? [:]
 
     var body: some View {
-        Text("Profile picker:")
-
-        ForEach(profiles.sorted(by: <), id: \.key) { name, identifier in
-            Button("Open in \(name)") {
-                openURL(urlToOpen, inWindowWithIdentifier: identifier)
+        VStack(spacing: 0) {
+            ForEach(profiles.sorted(by: <), id: \.key) { name, identifier in
+                Button {
+                    openURL(url.absoluteString, inWindowWithIdentifier: identifier)
+                } label: {
+                    Text(name)
+                        .font(.title)
+                        .padding(.horizontal, 30)
+                        .padding(.vertical, 16)
+                        .frame(maxWidth: .infinity)
+                }
+                .cornerRadius(10)
             }
         }
+        .padding(20)
+        .background(.ultraThinMaterial)
+        .cornerRadius(30)
     }
 
     private func openURL(_ url: String, inWindowWithIdentifier identifier: String) {

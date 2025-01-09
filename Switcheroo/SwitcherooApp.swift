@@ -14,11 +14,10 @@ struct SwitcherooApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
-        Window("Switcheroo", id: "main") {
-          ContentView()
+        Settings {
+            SettingsView()
                 .frame(width: 320)
         }
-        .windowResizability(.contentSize)
     }
 
 }

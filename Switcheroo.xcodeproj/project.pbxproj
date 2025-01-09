@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */; };
-		FE1A8B262B98F32E0007963E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A8B252B98F32E0007963E /* ContentView.swift */; };
 		FE1A8B282B98F32F0007963E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1A8B272B98F32F0007963E /* Assets.xcassets */; };
 		FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */; };
 		FE936EA32CE4966F006B2CE7 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */; };
 		FE936EA52CE4971F006B2CE7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA42CE4971F006B2CE7 /* SettingsView.swift */; };
+		FED302AF2D2FA8A700D756FF /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F461877F2BA9B7D300C92A84 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		FE1A8B202B98F32E0007963E /* Switcheroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switcheroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherooApp.swift; sourceTree = "<group>"; };
-		FE1A8B252B98F32E0007963E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE1A8B272B98F32F0007963E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE1A8B2C2B98F32F0007963E /* Switcheroo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Switcheroo.entitlements; sourceTree = "<group>"; };
 		FE2391E32B99016B0094E61B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		FE936EA42CE4971F006B2CE7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +62,9 @@
 				FE2391E32B99016B0094E61B /* Info.plist */,
 				FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */,
 				FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */,
-				FE1A8B252B98F32E0007963E /* ContentView.swift */,
 				FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */,
 				FE936EA42CE4971F006B2CE7 /* SettingsView.swift */,
+				FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */,
 				FE1A8B272B98F32F0007963E /* Assets.xcassets */,
 				FE1A8B2C2B98F32F0007963E /* Switcheroo.entitlements */,
 			);
@@ -142,8 +142,8 @@
 			files = (
 				FE936EA52CE4971F006B2CE7 /* SettingsView.swift in Sources */,
 				FE936EA32CE4966F006B2CE7 /* ProfilePickerView.swift in Sources */,
+				FED302AF2D2FA8A700D756FF /* FloatingPanel.swift in Sources */,
 				FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */,
-				FE1A8B262B98F32E0007963E /* ContentView.swift in Sources */,
 				FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,22 +15,25 @@ struct SettingsView: View {
     @State private var newIdentifier = ""
 
     var body: some View {
-        ForEach(profiles.sorted(by: <), id: \.key) { name, identifier in
-            HStack {
-                Text("\(name): \(identifier)")
-                    .lineLimit(1)
+        VStack {
+            ForEach(profiles.sorted(by: <), id: \.key) { name, identifier in
+                HStack {
+                    Text("\(name): \(identifier)")
+                        .lineLimit(1)
 
-                Spacer()
+                    Spacer()
 
-                Button {
-                    deleteProfile(name)
-                } label: {
-                    Image(systemName: "trash")
+                    Button {
+                        deleteProfile(name)
+                    } label: {
+                        Image(systemName: "trash")
+                    }
                 }
             }
-        }
 
-        addProfileView
+            addProfileView
+        }
+        .padding()
     }
 
     private var addProfileView: some View {
