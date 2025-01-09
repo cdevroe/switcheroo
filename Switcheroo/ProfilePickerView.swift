@@ -13,25 +13,39 @@ struct ProfilePickerView: View {
     let url: URL
 
     @State private var profiles = UserDefaults.standard.dictionary(forKey: "profiles") as? [String: String] ?? [:]
+    @State private var selectedIndex = 0
 
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(profiles.sorted(by: <), id: \.key) { name, identifier in
-                Button {
-                    openURL(url.absoluteString, inWindowWithIdentifier: identifier)
-                } label: {
-                    Text(name)
-                        .font(.title)
-                        .padding(.horizontal, 30)
-                        .padding(.vertical, 16)
-                        .frame(maxWidth: .infinity)
-                }
-                .cornerRadius(10)
+            ForEach(Array(profiles.sorted(by: <).enumerated()), id: \.element.key) { index, profile in
+                button(with: profile, index: index)
             }
         }
         .padding(20)
         .background(.ultraThinMaterial)
         .cornerRadius(30)
+    }
+
+    private func button(with profile: Dictionary<String, String>.Element, index: Int) -> some View {
+        Button {
+            openURL(url.absoluteString, inWindowWithIdentifier: profile.value)
+        } label: {
+            Text(profile.key)
+                .font(.title)
+                .padding(.horizontal, 30)
+                .padding(.vertical, 16)
+                .frame(maxWidth: .infinity)
+                .background(selectedIndex == index ? Color(nsColor: .lightGray) : Color.clear)
+                .foregroundColor(selectedIndex == index ? Color.primary : Color.secondary)
+        }
+        .buttonStyle(.plain)
+        .containerShape(RoundedRectangle(cornerRadius: 10))
+        .keyboardShortcut(KeyEquivalent(Character("\(index + 1)")), modifiers: [])
+        .onHover { hover in
+            if hover {
+                selectedIndex = index
+            }
+        }
     }
 
     private func openURL(_ url: String, inWindowWithIdentifier identifier: String) {
