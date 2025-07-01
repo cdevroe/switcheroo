@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 
 struct ProfilePickerView: View {
@@ -16,24 +17,29 @@ struct ProfilePickerView: View {
     @State private var selectedIndex = 0
 
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(Array(profiles.sorted(by: <).enumerated()), id: \.element.key) { index, profile in
-                button(with: profile, index: index)
-            }
-        }
-        .padding(20)
-        .background(.ultraThinMaterial)
-        .cornerRadius(30)
-        .background(
-            KeyDownListener(
-                selectedIndex: $selectedIndex,
-                profiles: profiles.sorted(by: <),
-                url: url,
-                opener: { url, identifier in
-                    openURL(url, inWindowWithIdentifier: identifier)
+        HStack(spacing: 0) {
+            WebView(url: url)
+                .frame(width: 300, height: 250)
+
+            VStack(spacing: 0) {
+                ForEach(Array(profiles.sorted(by: <).enumerated()), id: \.element.key) { index, profile in
+                    button(with: profile, index: index)
                 }
+            }
+            .padding(20)
+            .background(.ultraThinMaterial)
+            .cornerRadius(30)
+            .background(
+                KeyDownListener(
+                    selectedIndex: $selectedIndex,
+                    profiles: profiles.sorted(by: <),
+                    url: url,
+                    opener: { url, identifier in
+                        openURL(url, inWindowWithIdentifier: identifier)
+                    }
+                )
             )
-        )
+        }
     }
 
     private func button(with profile: Dictionary<String, String>.Element, index: Int) -> some View {

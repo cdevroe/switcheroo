@@ -13,7 +13,8 @@
 		FE936EA32CE4966F006B2CE7 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */; };
 		FE936EA52CE4971F006B2CE7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA42CE4971F006B2CE7 /* SettingsView.swift */; };
 		FED302AF2D2FA8A700D756FF /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */; };
-		FEEAADB72D2FEFC200DD0F91 /* KeyDownListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */; };
+                FEEAADB72D2FEFC200DD0F91 /* KeyDownListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */; };
+                6271D2FA89AE08A550B2AE81 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A679F61CCD614A51463E3BA /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		FE936EA42CE4971F006B2CE7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
-		FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDownListener.swift; sourceTree = "<group>"; };
+                FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDownListener.swift; sourceTree = "<group>"; };
+                4A679F61CCD614A51463E3BA /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +69,9 @@
 				FE936EA22CE4966F006B2CE7 /* ProfilePickerView.swift */,
 				FE936EA42CE4971F006B2CE7 /* SettingsView.swift */,
 				FED302AE2D2FA8A700D756FF /* FloatingPanel.swift */,
-				FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */,
-				FE1A8B272B98F32F0007963E /* Assets.xcassets */,
+                                FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */,
+                                4A679F61CCD614A51463E3BA /* WebView.swift */,
+                                FE1A8B272B98F32F0007963E /* Assets.xcassets */,
 				FE1A8B2C2B98F32F0007963E /* Switcheroo.entitlements */,
 			);
 			path = Switcheroo;
@@ -144,8 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE936EA52CE4971F006B2CE7 /* SettingsView.swift in Sources */,
-				FEEAADB72D2FEFC200DD0F91 /* KeyDownListener.swift in Sources */,
-				FE936EA32CE4966F006B2CE7 /* ProfilePickerView.swift in Sources */,
+                                FEEAADB72D2FEFC200DD0F91 /* KeyDownListener.swift in Sources */,
+                                6271D2FA89AE08A550B2AE81 /* WebView.swift in Sources */,
+                                FE936EA32CE4966F006B2CE7 /* ProfilePickerView.swift in Sources */,
 				FED302AF2D2FA8A700D756FF /* FloatingPanel.swift in Sources */,
 				FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */,
 				FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */,
