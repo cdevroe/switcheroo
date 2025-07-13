@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE13FB432E23E882000E7BEA /* Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FE13FB312E23E882000E7BEA /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FE1A8B242B98F32E0007963E /* SwitcherooApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */; };
 		FE1A8B282B98F32F0007963E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1A8B272B98F32F0007963E /* Assets.xcassets */; };
 		FE936EA12CE493E1006B2CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE936EA02CE493E1006B2CE7 /* AppDelegate.swift */; };
@@ -16,8 +17,33 @@
 		FEEAADB72D2FEFC200DD0F91 /* KeyDownListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FE13FB412E23E882000E7BEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE1A8B182B98F32E0007963E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE13FB302E23E882000E7BEA;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE13FB442E23E882000E7BEA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FE13FB432E23E882000E7BEA /* Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F461877F2BA9B7D300C92A84 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		FE13FB312E23E882000E7BEA /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1A8B202B98F32E0007963E /* Switcheroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switcheroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1A8B232B98F32E0007963E /* SwitcherooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherooApp.swift; sourceTree = "<group>"; };
 		FE1A8B272B98F32F0007963E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,7 +56,28 @@
 		FEEAADB62D2FEFC200DD0F91 /* KeyDownListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDownListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FE13FB472E23E882000E7BEA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = FE13FB302E23E882000E7BEA /* Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FE13FB322E23E882000E7BEA /* Extension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FE13FB472E23E882000E7BEA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Extension; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		FE13FB2E2E23E882000E7BEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE1A8B1D2B98F32E0007963E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,6 +93,7 @@
 			children = (
 				F461877F2BA9B7D300C92A84 /* readme.md */,
 				FE1A8B222B98F32E0007963E /* Switcheroo */,
+				FE13FB322E23E882000E7BEA /* Extension */,
 				FE1A8B212B98F32E0007963E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FE1A8B202B98F32E0007963E /* Switcheroo.app */,
+				FE13FB312E23E882000E7BEA /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,6 +126,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FE13FB302E23E882000E7BEA /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE13FB482E23E882000E7BEA /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				FE13FB2D2E23E882000E7BEA /* Sources */,
+				FE13FB2E2E23E882000E7BEA /* Frameworks */,
+				FE13FB2F2E23E882000E7BEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FE13FB322E23E882000E7BEA /* Extension */,
+			);
+			name = Extension;
+			packageProductDependencies = (
+			);
+			productName = Extension;
+			productReference = FE13FB312E23E882000E7BEA /* Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FE1A8B1F2B98F32E0007963E /* Switcheroo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE1A8B2F2B98F32F0007963E /* Build configuration list for PBXNativeTarget "Switcheroo" */;
@@ -84,10 +155,12 @@
 				FE1A8B1C2B98F32E0007963E /* Sources */,
 				FE1A8B1D2B98F32E0007963E /* Frameworks */,
 				FE1A8B1E2B98F32E0007963E /* Resources */,
+				FE13FB442E23E882000E7BEA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE13FB422E23E882000E7BEA /* PBXTargetDependency */,
 			);
 			name = Switcheroo;
 			productName = Switcheroo;
@@ -101,9 +174,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1610;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					FE13FB302E23E882000E7BEA = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					FE1A8B1F2B98F32E0007963E = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -123,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				FE1A8B1F2B98F32E0007963E /* Switcheroo */,
+				FE13FB302E23E882000E7BEA /* Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE13FB2F2E23E882000E7BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE1A8B1E2B98F32E0007963E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +223,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE13FB2D2E23E882000E7BEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE1A8B1C2B98F32E0007963E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,7 +245,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FE13FB422E23E882000E7BEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE13FB302E23E882000E7BEA /* Extension */;
+			targetProxy = FE13FB412E23E882000E7BEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FE13FB452E23E882000E7BEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Switcheroo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andadinosaur.Switcheroo.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FE13FB462E23E882000E7BEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Switcheroo;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.andadinosaur.Switcheroo.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		FE1A8B2D2B98F32F0007963E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -191,6 +350,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = N32VBRFKX7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -255,6 +415,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = N32VBRFKX7;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -286,7 +447,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = N32VBRFKX7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -300,7 +460,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andadinosaur.Switcheroo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -319,7 +479,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = N32VBRFKX7;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +492,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andadinosaur.Switcheroo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -344,6 +503,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE13FB482E23E882000E7BEA /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE13FB452E23E882000E7BEA /* Debug */,
+				FE13FB462E23E882000E7BEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE1A8B1B2B98F32E0007963E /* Build configuration list for PBXProject "Switcheroo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
