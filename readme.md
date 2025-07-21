@@ -28,7 +28,7 @@ Currently, setting up existing Safari Profiles in Switcheroo is a bit cumbersome
 
 **1.2.0 - July 19, 2025**
 - Updated Profile picker UI
-- Move to Profile feature
+- Switch to Profile feature
 
 **1.0.1 - November 13, 2024**
 
