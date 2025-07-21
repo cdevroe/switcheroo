@@ -1,6 +1,6 @@
 # Switcheroo - Little Arc for Safari
 
-Switcheroo is a small open source macOS app that can be set as your default browser. When clicking a link from a third-party app (such as Slack or Mail) Switcheroo allows you to choose which Safari Profile you’d like a link to be loaded in.
+Switcheroo is an open source macOS app that can be set as your default browser. When clicking a link from a third-party app (such as Slack or Mail) Switcheroo allows you to choose which Safari Profile you’d like a link to open in.
 
 ## Contributors
 
@@ -25,6 +25,10 @@ Currently, setting up existing Safari Profiles in Switcheroo is a bit cumbersome
 - Browse GitHub Issues to find a task that needs to be done and assign it to yourself.  
 
 ## Version History
+
+**1.2.0 - July 19, 2025**
+- Updated Profile picker UI
+- Move to Profile feature
 
 **1.0.1 - November 13, 2024**
 
